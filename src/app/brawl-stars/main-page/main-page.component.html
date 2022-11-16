@@ -1,0 +1,26 @@
+<h1>Brawl Stars</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let character of characters">{{character.name}} - 
+                <label [ngClass]="{green: character.health>3000, yellow: character.health<=3000 && character.health>1000, red: character.health>0}">
+                    {{character.health}}
+                </label>
+            </li>
+        </ul> -->
+        <app-character></app-character>
+    </div>
+    <div class="col">
+        <!-- <h3>Añade un personaje</h3>
+        <form (ngSubmit)="addCharacter()">
+            <input type="text" name="name" id="name" [(ngModel)]="nuevo.name">
+            <input type="number" name="health" id="health" [(ngModel)]="nuevo.health">
+            <button type="submit">Add Character</button>
+        </form> -->
+        <app-add-character [newCharacter]="nuevo"></app-add-character>
+    </div>
+</div>
+

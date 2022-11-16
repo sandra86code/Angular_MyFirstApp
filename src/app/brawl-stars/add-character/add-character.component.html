@@ -1,0 +1,6 @@
+<h3>Añade un personaje</h3>
+<form (ngSubmit)="addCharacter()">
+    <input type="text" name="name" id="name" [(ngModel)]="newCharacter.name">
+    <input type="number" name="health" id="health" [(ngModel)]="newCharacter.health">
+    <button type="submit">Add Character</button>
+</form>

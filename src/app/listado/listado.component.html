@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let item of students; 
+                let i=index; 
+                let first=first;
+                let par=even; 
+                let impar=odd"
+    [ngClass]="{par:par, impar:impar}"> {{i+1}} - {{item}}</li>
+</ul>
+<h3 *ngIf="passing_students.length>0; else malo">Aprobados</h3>
+<ng-template #malo>
+    <h3>Qué malo eres, no has aprobado todavía a nadie</h3>
+</ng-template>
+<ul>
+    <li *ngFor="let item of passing_students;
+                let j=index;
+                let par=even; 
+                let impar=odd"
+                [ngClass]="{par:par, impar:impar}"> {{j+1}} - {{item}}</li>
+</ul>
+<button (click)="pass()">Aprobar</button>
+

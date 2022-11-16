@@ -1,0 +1,10 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <li *ngFor="let character of characters">{{character.name}} - 
+        <label [ngClass]="{green: character.health>3000, yellow: character.health<=3000 && character.health>1000, red: character.health>0}">
+            {{character.health}}
+        </label>
+        <button type="button" (click)="deleteCharacter(character)">Delete</button>
+    </li>
+</ul>
